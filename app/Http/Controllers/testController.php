@@ -11,9 +11,9 @@ class testController extends Controller
 {
 public function __construct()
 {
-// $this->middleware('checkRole:admin_role')->except('updateUser');
-// $this->middleware('checkRole:editor_role')->only('updateUser','loginPage');
-// $this->middleware('checkRole:writer_role')->only('addNew');
+$this->middleware('checkRole:admin_role')->except('updateUser');
+$this->middleware('checkRole:editor_role')->only('updateUser','loginPage');
+$this->middleware('checkRole:writer_role')->only('addNew');
 }
 
     public function loginPage(Request $request)
